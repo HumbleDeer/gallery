@@ -2,12 +2,17 @@
   "input": "./albums",
   "output": "./build_output",
   "title": "ZionIyes",
+  "footer": "ZionIyes ©️ 2022",
+  "usage-stats": false,
+  
   "sort-albums-by": "start-date",
-  "sort-media-by": "filename",
-  "download-photos": "copy",
+  "sort-albums-direction": "desc",
+  "sort-media-by": "date",
+  "sort-media-direction": "desc",
+  
+  "download-photos": "resize",
   "cleanup": true,
+  
   "theme": "cards",
   "css": "./custom.css",
-  "footer": "ZionIyes ©️ 2022",
-  "usage-stats": false
 }
