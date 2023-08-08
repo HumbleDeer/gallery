@@ -38,12 +38,6 @@ jobs:
         
       - name: Build site
         run: thumbsup --config config.json
-      
-      - name: Upload Artifact for download
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ github.event.head_commit.message }}
-          path: ./build_output
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1.0.5
