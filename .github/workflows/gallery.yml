@@ -24,11 +24,11 @@ jobs:
     name: Build Gallery 🔧
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install dependencies
         run: sudo apt update && sudo apt install -y exiftool graphicsmagick imagemagick ffmpeg gifsicle
@@ -40,7 +40,7 @@ jobs:
         run: thumbsup --config config.json
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1.0.5
+        uses: actions/upload-pages-artifact@v3
         with:
           # Path of the directory containing the static assets.
             path: ./build_output
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.3
+        uses: actions/deploy-pages@v4
         id: deployment
         with:
           token: ${{ github.token }}
